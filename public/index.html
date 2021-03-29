@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TouchIt | HOME</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="home.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="home__screen">
+                <div class="home__title">TouchIt</div>
+                <div class="user__container">
+                    <div class="user__information">
+                        <div class="user__picture"></div>
+                        <input type="text" class="user__name"
+                            placeholder="Escribe tu Nombre">
+                        <input type="text" class="join__room"
+                            placeholder="Escribe Codigo">
+                    </div>
+
+                    <div class="buttons">
+                        <button class="play__button">PLAY</button>
+                        <button class="create-room__button">CREATE ROOM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
