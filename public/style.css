@@ -1,12 +1,23 @@
+/* @font-face {
+    font-family: lower-easy;
+    src: url(font/lower-east-side.regular.ttf);
+} */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body,html{
     height: 100vh;
     background: black;
+    background-color: #001029;
+    background-image: url("./img/stardust.png");
+    font-family: lower-easy, cursive;
+    animation: move 18s ease-in-out infinite alternate;
+    overflow: hidden;
 }
 
 .container {
@@ -29,14 +40,22 @@ body,html{
     background: linear-gradient(to top,#ff00d4,#6f00ff,#00a2ff);
     width: 100%;
     height: 100vh;
+    background-image: url("./img/stardust.png");
+    font-family: lower-easy, cursive;
+    animation: move 18s ease-in-out infinite alternate;
 }
 
 .home__title{
+    color: #009688;
     text-transform: uppercase;
-    margin-top: 2px;
-    font-size: 3rem;
-    color: orange;
     font-weight: 900;
+    font-size: 3rem;
+    margin: 10px auto 30px auto;
+    /* height: 100px; */
+    padding: 10px 0 20px 0;
+}
+input{
+    font-weight: bolder;
 }
 
 .user__container{
@@ -52,7 +71,9 @@ body,html{
     align-items: center;
     justify-content: flex-start;
     padding: 10px;
-    box-shadow: 0px 0px 20px orange;
+    background-color: #00968717;
+    box-shadow: 0px 4px 5px  #009688;
+    animation: moveIn 1s ease-in-out infinite alternate;
 }
 
 .user__information{
@@ -61,15 +82,16 @@ body,html{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .user__picture{
     width: 150px;
     height: 150px;
-    background: orange;
+    background: #009688;
     border-radius: 50px;;
     margin-bottom: 1rem;
-    box-shadow: 0px 0px 20px orange;
+    box-shadow: 0px 0px 20px #009688;
 }
 
 .user__name,.join__room {
@@ -79,18 +101,25 @@ body,html{
     background: #ffffffbb;
     border-radius: .5rem;
     height: 3rem;
-    color: orange;
+    color: #009688;
     outline: none;
-    border: 1px solid orange;
+    border: 1px solid #009688;
     margin: 4px;
     text-align: center;
     font-size: 1rem;
+    background-color: #00968717;
+    border-bottom: 3px solid #ffffffbb;
+    width: 80%;
 }
 
 .user__name::placeholder,.join__room::placeholder{
     text-align: center;
     font-size: 1rem;
-    color: orange;
+    color: #009688;
+}
+.user__name:hover,.join__room:hover{
+    border: 1px solid #ffffffbb;
+    border-bottom: 3px solid #ffffffbb;
 }
 
 .buttons{
@@ -108,9 +137,47 @@ body,html{
     height: 3rem;
     border-radius: 1rem;
     margin: 10px;
-    border: 1px solid orange;
+    border: 1px solid #009688;
     font-size: 1rem;
-    color: orange;
+    color: #009688;
     font-weight: 900;
     outline: none;
+    background-color: #00968717;
+    cursor: pointer;
+    transition: transform ease-in 100ms;
+}
+
+button:hover{
+    border: 1px solid #ffffff36;
+    background: #ffffff33;
+    transform: translate(5px,-5px);
+    box-shadow: -2px 2px 2px #979595cc;
+}
+
+
+@keyframes move{
+    0%{
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+    50%{
+        background-color: black; 
+    }
+    100%{
+        background-position-x: 10%;
+        background-position-y: 10%;
+    }
+}
+
+
+@keyframes moveIn{
+    0%{
+        box-shadow: -1px -1px 5px  #009688;
+    }
+    50%{
+        box-shadow: 0px 0px 5px  #009688;
+    }
+    100%{
+        box-shadow: 1px 1px 5px  #009688;
+    }
 }

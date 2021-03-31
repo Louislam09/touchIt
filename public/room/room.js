@@ -59,6 +59,9 @@ socket.on('code', ({ code }) => {
 });
 
 socket.on('players-info', playerInformations => {
+  socket.emit("myID",{ID: socket.id});
+  console.log("playerInformations",playerInformations)
+  console.log(ROOM_NAME)
   PLAYERS_INFORMATIONS = playerInformations;
   playerInformations.forEach((player,index) => {
     playersList[index].classList.remove("none");
@@ -69,8 +72,9 @@ socket.on('players-info', playerInformations => {
   })
 });
 
-socket.on("START_GAME", () => {
+socket.on("START_GAME", (data) => {
   localStorage.ROOM_NAME = ROOM_NAME;
+  localStorage.GAME_INFO = JSON.stringify(data);
 
   if(startGameButton.hasAttribute("disabled")){
     window.location.href = `/client?player=1`;
@@ -89,3 +93,6 @@ startGameButton.addEventListener("click",() => {
     informations: PLAYERS_INFORMATIONS
   });
 })
+
+
+closeRoomButton.addEventListener("click",()=> window.location.href= "/")

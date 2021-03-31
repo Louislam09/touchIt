@@ -7,6 +7,9 @@
 body,html{
     height: 100vh;
     background: black;
+    background-image: url("./../img/stardust.png");
+    font-family: lower-easy, cursive;
+    animation: move 18s ease-in-out infinite alternate;
 }
 
 .container {
@@ -45,10 +48,11 @@ body,html{
     border: 1px solid white;
     border-radius: 5px;
     display: grid;
+    background: transparent;
 }
 
 .square{
-    border: 1px solid blueviolet;
+    border: 1px solid #ffffff54;
     margin: 3px;
     border-radius: 5px;
 }
@@ -68,6 +72,8 @@ body,html{
     align-items: center;
     margin: 10px 4px;
     background-color: #7094d8;
+    background: transparent;
+    border: 1px solid white;
     height: 50px;
     width: 150px;
     width: 50%;
@@ -84,7 +90,9 @@ body,html{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
+    color: white;
+    border-right: 1px solid white;
+    /* background: #ffffff; */
 }
 
 .player__score{
@@ -100,4 +108,19 @@ body,html{
     padding: 5px;
     width: 70%;
     text-align: center;
+}
+
+
+@keyframes move{
+    0%{
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+    50%{
+        background-color: black; 
+    }
+    100%{
+        background-position-x: 10%;
+        background-position-y: 10%;
+    }
 }
