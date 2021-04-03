@@ -156,7 +156,8 @@ body,html{
 }
 
 .options__section button{
-    width: 90%;
+    min-width: 100%;
+    width: fit-content;
     height: 79px;
     background: #ffffff49;
     margin: 4px auto;
@@ -164,6 +165,7 @@ body,html{
     outline: none;
     border: 1px solid white;
     border-radius: 5px;
+    padding: 0 4px;
     font-size: 1.5rem;
     cursor: pointer;
     transition: background ease;

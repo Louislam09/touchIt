@@ -51,11 +51,17 @@ body,html{
     font-weight: 900;
     font-size: 3rem;
     margin: 10px auto 30px auto;
-    /* height: 100px; */
     padding: 10px 0 20px 0;
 }
 input{
     font-weight: bolder;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+input:focus,input:active{
+    border: 1px solid white;
+    color: white;
 }
 
 .user__container{
@@ -120,6 +126,9 @@ input{
 .user__name:hover,.join__room:hover{
     border: 1px solid #ffffffbb;
     border-bottom: 3px solid #ffffffbb;
+}
+.join__room{
+    text-transform:none;
 }
 
 .buttons{

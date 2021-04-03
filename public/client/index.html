@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TouchIt | GAME</title>
     <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/socket.io/socket.io.js" defer></script>
     <script src="main.js" defer></script>
 </head>
@@ -14,15 +15,15 @@
         <div class="players">
             <div class="player ">
                 <div class="player_pic">
-                    <div class="player__score">10</div>
+                    <div class="player__score">0</div>
                 </div>
-                <div class="player__name">luis</div>
+                <div class="player__name">player1</div>
             </div>
             <div class="player ">
                 <div class="player_pic">
-                    <div class="player__score">20</div>
+                    <div class="player__score">0</div>
                 </div>
-                <div class="player__name">Claire</div>
+                <div class="player__name">player2</div>
             </div>
         </div>
         <div class="timer">
@@ -30,6 +31,17 @@
         </div>
         <div class="game__screen">
         </div>
+
+        <div class="gameOver hide">
+            <div class="winner"><span class="winner_message">Gano</span>  <br> 🏆 <span class="winner_name">Luis</span> 🏆   </div>
+            <img class="gameover_img" src="./images/monkey.gif" width="200px" alt="" srcset="">
+            <div class="title">JUGAR DENUEVO ?</div>
+            <div class="buttons">
+                <button class="yes__button">Si</button>
+                <button class="no__button">No</button>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
